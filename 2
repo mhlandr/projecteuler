@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+long long a, b, c;
+int main(){
+	long long s=0, t1=0, t2=1, t3=0;
+	while (true) {
+		if (t3 > 4000000)
+			break;
+		t3 = t1 + t2;
+		t1 = t2;
+		t2 = t3;
+		if (t3 % 2 == 0)
+			s = s + t3;
+
+	}
+	cout << s;
+	return 0;
+}
