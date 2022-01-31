@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+long long a, b, c;
+int main(){
+	long long ss=0, s=0, t1=0, t2=0, t3=0;
+	for (int i = 1; i <= 100; i++) {
+		ss = ss + i;
+		s = s + i * i;
+	}
+
+	cout << ss*ss-s;
+	return 0;
+}
