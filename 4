@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>  
+using namespace std;
+int a=1, b=0, c;
+bool isPal(int a) {
+	string s, s1;
+	s =to_string( a);
+	int i, n;
+	s1 = string(s.rbegin(), s.rend());
+	if (s1 == s)
+		return true;
+	else 
+		return false;
+}
+int main(){
+	long long ss=0, s=0, t1=0, t2=0, t3=0;
+	for(int i=999;i>=100;i--)
+		for(int j=999;j>=100;j--){
+			a = i * j;
+			if (isPal(a)) {
+				if (a > b) 
+					b = a;
+				
+				
+			}
+		}
+	cout << b;
+	return 0;
+} 
