@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+long long a=1, b, c;
+
+int main(){
+	long long ss=0, s=0, t1=0, t2=0, t3=0;
+	t1 = sqrt(600851475143);
+	t2 = 600851475143;
+	long long maxPrime = 0;
+	for (int i = 2; i <= t1; i++ ) {
+		while (t2 % i == 0) {
+			maxPrime = i;
+			t2 = t2 / i;
+		}
+		
+	}
+	cout << maxPrime;
+	return 0;
+} 
