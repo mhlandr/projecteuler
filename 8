@@ -1,0 +1,29 @@
+#include<fstream>
+#include<vector>  
+#include<iostream>
+using namespace std;
+long long b=1, c;
+int a;
+string v,s;
+int main(){
+	ifstream fin("input.in");
+	while (fin >> s) {
+		v += s;
+	}
+	long long product = 1, prod_max = 1;
+	int max_it;
+	for (int i = 0; i < 1000-13; i++) {
+		for (int j = 0; j < 13; j++) {
+			product = product * (v[j + i]-'0');
+		}
+		if (product > prod_max) {
+			prod_max = product;
+			max_it = i;
+		}
+		product = 1;
+	}
+	cout << prod_max;
+
+
+	return 0;
+} 
